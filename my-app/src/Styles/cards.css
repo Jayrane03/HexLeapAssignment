@@ -127,6 +127,7 @@ body{
 }
 .text_add{
    margin-top: 40px;
+   color: black !important;
    margin-bottom: -20px;
 }
 .text_ad{
@@ -160,9 +161,12 @@ body{
   .card-section.dark .heading{
     color: #F7F7F8;
   }
-  .card-section.dark .text_ad,.text_add{
-    color: #F7F7F8;
+  .card-section.dark .text_ad{
+    color: #F7F7F8 !important;
   }
-  
+  .card-section.dark .text_add{
+    color: #F7F7F8 !important;
+  }
+
   /* Add additional dark mode styles as needed */
   
