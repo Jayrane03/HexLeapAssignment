@@ -1,0 +1,59 @@
+import React, { useState } from 'react';
+import "../Styles/cards.css"; 
+import Slider_Section from './slider';
+
+const CardSection = () => {
+  const [darkMode, setDarkMode] = useState(false); // Start with light mode
+
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode); // Toggle dark mode state
+  };
+
+  const cardData = [
+    { id: 1, title: "Sacramento River Cats", totalEvents: 48, sport: "Baseball", image: "/Images/img1.jpg" },
+    { id: 2, title: "Las Vegas Aviators", totalEvents: 28, sport: "Baseball", image: "/Images/img2.jpg" },
+    { id: 3, title: "New jersey devils", totalEvents: 15, sport: "Ice Hockey", image: "/Images/img_3.jpg" },
+    { id: 4, title: "Las Vegas Aviators", totalEvents: 28, sport: "Baseball", image: "/Images/img2.jpg" },
+    { id: 5, image: "/Images/img_4.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+  ];
+
+  return (
+    <div className={`card-section ${darkMode ? 'dark' : ''}`}>
+      <h1 className="heading">Sports</h1>
+      <div className="container">
+        {cardData.map(card => (
+          <div className="card shadow-xl rounded-lg" key={card.id}>
+            <img className="rounded-t-lg" src={card.image} alt={`Card ${card.id}`} />
+            <div className="card-content p-4">
+              {card.id !== 5 && (
+                <>
+                  <h3 className="text_head">{card.title}</h3>
+                  <div className=" desc-box grid grid-cols-2 gap-4 mt-2">
+                    <div className='t-events'>
+                      <p className="text-green-600">Total Events <span>{card.totalEvents}</span></p>
+                    </div>
+                    <div className='sport-type'>
+                      <p className="text-purple-600">Sport <span> {card.sport}</span></p>
+                    </div>
+                  </div>
+                </>
+              )}
+              {card.id === 5 && (
+                <>
+                  <h3 className="text-2xl font-bold mb-2 text_add">Advertisement Title</h3>
+                  <p className="text_ad">{card.desc}</p>
+                </>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+      <button className={`see_more ${darkMode ? 'dark' : ''}`} onClick={toggleDarkMode}>
+        {darkMode ? 'Light Mode' : 'Dark Mode'}
+      </button>
+      <Slider_Section darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+    </div>
+  );
+};
+
+export default CardSection;

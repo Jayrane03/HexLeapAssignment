@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* tailwind.css */
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+    background-color: #F7F7F8;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    
+    
+}
+.card-section {
+   
+    width: 100vw;
+   height: 280vh;
+
+
+  }
+  .container{
+     display: flex;
+     height: 100vh;
+     width: 100vw;
+    /* flex-wrap: wrap; */
+  align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    height: 78vh;
+    width:210px;
+    /* height: 400px; */
+    margin: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+  }
+  
+  .card p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  .heading {
+    /* width: 85px !important;  */
+    margin-left: 11%;
+    padding-top: 40px;
+    position: relative;
+    padding-bottom: 8px;
+ /* Add bottom shadow */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.9); /* Add text shadow */
+  }
+  
+  .heading::before {
+    content: " ";
+    background-color: #738FFF;
+    height: 2px;
+    width: 94px;
+    bottom: 0;
+    position: absolute;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9); /* Add bottom shadow */
+  }
+  
+  .see_more{
+    background-color: #2C9CF0;
+    color: #fff;
+    margin-top: 40px;
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100px;
+    display: block;
+    margin: auto;
+    border:none;
+    outline: none;
+   
+
+}
+.t-events p{
+    display: flex;
+    gap: 8px;
+    letter-spacing: 0.8px;
+    flex-direction: column;
+}
+.sport-type p{
+    display: flex;
+    letter-spacing: .8px;
+    gap: 8px;
+    padding-bottom: 8px;
+    flex-direction: column;
+}
+
+.desc-box{
+    border-radius: 5px;
+  gap: 15px;
+  padding: 8px 5px;
+  width: 190px;
+   background-color: #ededf4;
+    justify-content: space-evenly;
+    display: flex;
+   
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+.text_head{
+  margin: 22px 0;
+    font-size: 17px;
+}
+.text_add{
+   margin-top: 40px;
+   margin-bottom: -20px;
+}
+.text_ad{
+    padding: 20px;
+    text-align: left;
+}
+
+/* dark-mode.css */
+
+.card-section.dark {
+    background-color: #292B32; /* Dark background color */
+  }
+  .card-section.dark .card{
+    background-color: #3B3E47;
+    border: none;
+  }
+  .card-section.dark .text_head {
+    color: #fff; /* Dark text color for h1 */
+  }
+  .card-section.dark .desc-box{
+    background-color: #292B32;
+    
+     
+  }
+  .card-section.dark .desc-box p{
+    color: #DFDFDF;
+  }
+  .card-section.dark .desc-box span{
+    color: #FFFFFF;
+  }
+  .card-section.dark .heading{
+    color: #F7F7F8;
+  }
+  .card-section.dark .text_ad,.text_add{
+    color: #F7F7F8;
+  }
+  
+  /* Add additional dark mode styles as needed */
+  
