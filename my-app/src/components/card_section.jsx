@@ -10,6 +10,7 @@ const CardSection = () => {
   };
 
   const cardData = [
+    { id: 1, title: "Sacramento River Cats", totalEvents: 48, sport: "Baseball", image: "/Images/img1.jpg" },
     { id: 2, title: "Las Vegas Aviators", totalEvents: 28, sport: "Baseball", image: "/Images/img2.jpg" },
     { id: 3, title: "New Jersey Devils", totalEvents: 15, sport: "Ice Hockey", image: "/Images/img_3.jpg" },
     { id: 4, title: "Las Vegas Aviators", totalEvents: 28, sport: "Baseball", image: "/Images/img2.jpg" },
