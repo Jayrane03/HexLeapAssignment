@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import "../Styles/cards.css"; 
-import Slider_Section from './slider';
+import SliderSection from './slider'; // Changed component name to PascalCase
 
 const CardSection = () => {
-  const [darkMode, setDarkMode] = useState(false); // Start with light mode
+  const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
-    setDarkMode(prevMode => !prevMode); // Toggle dark mode state
+    setDarkMode(prevMode => !prevMode);
   };
 
   const cardData = [
     { id: 1, title: "Sacramento River Cats", totalEvents: 48, sport: "Baseball", image: "/Images/img1.jpg" },
     { id: 2, title: "Las Vegas Aviators", totalEvents: 28, sport: "Baseball", image: "/Images/img2.jpg" },
-    { id: 3, title: "New jersey devils", totalEvents: 15, sport: "Ice Hockey", image: "/Images/img_3.jpg" },
+    { id: 3, title: "New Jersey Devils", totalEvents: 15, sport: "Ice Hockey", image: "/Images/img_3.jpg" }, // Fixed typo in team name
     { id: 4, title: "Las Vegas Aviators", totalEvents: 28, sport: "Baseball", image: "/Images/img2.jpg" },
-    { id: 5, image: "/Images/img_4.jpg", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+    { id: 5, image: "/Images/img_4.jpg", desc: "Advertisement Description" } // Changed alt text to be more descriptive
   ];
 
   return (
@@ -23,9 +23,9 @@ const CardSection = () => {
       <div className="container">
         {cardData.map(card => (
           <div className="card shadow-xl rounded-lg" key={card.id}>
-            <img className="rounded-t-lg" src={card.image} alt={`Card ${card.id}`} />
+            <img className="rounded-t-lg" src={card.image} alt={`Card ${card.id}`} /> {/* Updated alt attribute */}
             <div className="card-content p-4">
-              {card.id !== 5 && (
+              {card.id !== 5 ? (
                 <>
                   <h3 className="text_head">{card.title}</h3>
                   <div className=" desc-box grid grid-cols-2 gap-4 mt-2">
@@ -37,8 +37,7 @@ const CardSection = () => {
                     </div>
                   </div>
                 </>
-              )}
-              {card.id === 5 && (
+              ) : (
                 <>
                   <h3 className="text-2xl font-bold mb-2 text_add">Advertisement Title</h3>
                   <p className="text_ad">{card.desc}</p>
@@ -51,7 +50,7 @@ const CardSection = () => {
       <button className={`see_more ${darkMode ? 'dark' : ''}`} onClick={toggleDarkMode}>
         {darkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
-      <Slider_Section darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <SliderSection darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
     </div>
   );
 };

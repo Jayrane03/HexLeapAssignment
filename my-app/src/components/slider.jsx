@@ -7,7 +7,7 @@ import darkTicket from "../Images/ticket.png"
 import topImage1 from "../Images/ticket_1.png"
 import topImage2 from "../Images/ticket_2.png"
 
-const Slider_Section = ({ darkMode }) => {
+const SliderSection = ({ darkMode }) => {
   return (
     <div className={`main-container ${darkMode ? 'dark' : ''}`}>
       <div className="arrow-box left-arrow"><i class='bx bxs-chevron-left' ></i></div>
@@ -18,10 +18,10 @@ const Slider_Section = ({ darkMode }) => {
         {/* card_new 1 */}
         <div className="card_new">
           <div className="top-image-container">
-            <img src={topImage1} alt="Top Image 1" />
+            <img src={topImage1} alt="" />
             <hr className={`dotted-line ${darkMode ? 'dark' : ''}`} />
           </div>
-          <img src={darkMode ? darkTicket : ticketImg} alt="card_new 1" />
+          <img src={darkMode ? darkTicket : ticketImg} alt="" />
           <div className="card_new-content">
             <h3 className={darkMode ? 'dark-text' : ''}>Las Vegas Aviators</h3>
             <p className={darkMode ? 'dark-text' : ''}>Date and Time</p>
@@ -31,10 +31,10 @@ const Slider_Section = ({ darkMode }) => {
         {/* card_new 2 */}
         <div className="card_new">
           <div className="top-image-container">
-            <img src={topImage2} alt="Top Image 2" />
+            <img src={topImage2} alt="" />
             <hr className={`dotted-line ${darkMode ? 'dark' : ''}`} />
           </div>
-          <img src={darkMode ? darkTicket : ticketImg} alt="card_new 2" />
+          <img src={darkMode ? darkTicket : ticketImg} alt="" />
           <div className="card_new-content">
             <h3 className={darkMode ? 'dark-text' : ''}>Sacramento River Cats</h3>
             <p className={darkMode ? 'dark-text' : ''}>Date and Time</p>
@@ -44,10 +44,10 @@ const Slider_Section = ({ darkMode }) => {
         {/* card_new 3 */}
         <div className="card_new">
           <div className="top-image-container">
-            <img src={topImage1} alt="Top Image 3" />
+            <img src={topImage1} alt="" />
             <hr className={`dotted-line ${darkMode ? 'dark' : ''}`} />
           </div>
-          <img src={darkMode ? darkTicket : ticketImg} alt="card_new 3" />
+          <img src={darkMode ? darkTicket : ticketImg} alt="" />
           <div className="card_new-content">
             <h3 className={darkMode ? 'dark-text' : ''}>Las Vegas Aviators</h3>
             <p className={darkMode ? 'dark-text' : ''}>Date and Time</p>
@@ -59,4 +59,4 @@ const Slider_Section = ({ darkMode }) => {
   );
 };
 
-export default Slider_Section;
+export default SliderSection;
