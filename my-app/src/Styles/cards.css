@@ -167,6 +167,90 @@ body{
   .card-section.dark .text_add{
     color: #F7F7F8 !important;
   }
+  @media only screen and (max-width: 320px) {
+    /* Your responsive CSS styles for screens up to 320px here */
+    /* For example: */
+    body {
+      font-size: 14px; 
+     
+    }
+  .desc-box{
+    border-radius: 5px;
+    gap: 15px;
+    padding: 0px 5px;
+    width: 160px;
+    background-color: #ededf4;
+    justify-content: space-evenly;
+    display: flex;
+  }
+    .card{
+      width: 180px !important;
+      height: 70vh !important;
+    }
+    .card_new{
+      width: 200px !important;
+    }
 
+
+  }
   /* Add additional dark mode styles as needed */
+  @media only screen and (max-width: 720px) {
+    /* Your responsive CSS styles for screens up to 320px here */
+    /* For example: */
+    body {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    .card-section{
+      height: 697vh; 
+      
+    }
+    .main-container{
+      padding: 20px;
+      /* width: 85vw; */
+      text-align: center;
+      height: 313vh !important;
+      position: relative;
+      /* display: block; */
+      margin: auto;
+    }
+    .heading{
+    margin-left: 0;
+    text-align: center;
+    padding-top: 40px;
+    position: relative;
+    padding-bottom: 8px;
+    }
+    .container{
+      display: flex;
+      height: auto;
+      width: 100vw;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
   
+    }
+    .card_new-container{
+      align-items: center;
+      flex-direction: column;
+    }
+    .arrow-box{
+      width: 35px;
+      border: 2px solid #2C9CF0;
+      height: auto !important;
+      background-color: transparent;
+      position: absolute;
+      top: 55% !important;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      padding: 0 !important;
+      display: flex;
+      justify-self: center;
+      align-items: center;
+    }
+    .card_new {
+      position: relative;
+      margin-bottom: 84px;
+      display: inline-block;
+    }
+    }
